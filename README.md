@@ -1,2 +1,3 @@
-# https-github.com-youthol-School-celebration-avatar-program
-生成校庆头像微信小程序
+# 生成校庆头像微信小程序
+* uniapp项目，可多端使用
+* 功能：可授权微信头像，canvas生成头像，保存相册
