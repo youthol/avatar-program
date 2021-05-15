@@ -1,0 +1,58 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "山东理工大学校庆头像"
+			}
+		}
+	],
+	"subPackages": [
+		{
+	       "root": "pagesA",
+	       "pages": [{
+	           "path": "imgbox/imgbox",
+	           "style": {
+	           	"navigationBarTitleText": "头像类型"
+	           }
+	       }]
+	   },
+	   {
+	       "root": "pagesB",
+	       "pages": [{
+	           "path": "newimg/newimg",
+	           "style": {
+	           	"navigationBarTitleText": "生成头像"
+	           }
+	       }]
+	   }
+	],
+	"preloadRule": {
+	    "pagesA/imgbox/imgbox": {
+	        "network": "all",
+	        "packages": ["pagesB", "__APP__" ]
+	    },
+	    "pagesB/newimg/newimg": {
+	        "network": "all",
+	        "packages": ["__APP__", "pagesB"]
+	    }
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		// "backgroundTextStyle": "light", // 下拉导航栏loading样式
+		"backgroundColor": "#CB1B45", // 下拉导航栏背景色
+		"navigationBarTitleText": "山东理工大学校庆头像",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"enablePullDownRefresh":true//开启下拉刷新
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}

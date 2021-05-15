@@ -1,0 +1,1 @@
+<view class="content"><image class="bg-img" src="../../static/bg.jpg" mode="widthFix"></image><view class="text-area"><navigator url="../imgbox"><button size="mini">一起换头像吧</button></navigator></view></view>

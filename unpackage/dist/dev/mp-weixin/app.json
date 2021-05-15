@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "subPackages": [
+    {
+      "root": "pagesA",
+      "pages": [
+        "imgbox/imgbox"
+      ]
+    },
+    {
+      "root": "pagesB",
+      "pages": [
+        "newimg/newimg"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#CB1B45",
+    "navigationBarTitleText": "山东理工大学校庆头像",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "enablePullDownRefresh": true
+  },
+  "preloadRule": {
+    "pagesA/imgbox/imgbox": {
+      "network": "all",
+      "packages": [
+        "pagesB",
+        "__APP__"
+      ]
+    },
+    "pagesB/newimg/newimg": {
+      "network": "all",
+      "packages": [
+        "__APP__",
+        "pagesB"
+      ]
+    }
+  },
+  "networkTimeout": {
+    "request": 60000,
+    "connectSocket": 60000,
+    "uploadFile": 60000,
+    "downloadFile": 60000
+  },
+  "uniStatistics": {
+    "enable": false
+  },
+  "permission": {},
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

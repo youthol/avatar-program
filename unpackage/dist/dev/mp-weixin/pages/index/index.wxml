@@ -1,0 +1,1 @@
+<view class="content"><image class="bg-img" src="../../static/bg.jpg" mode="aspectFit" show-menu-by-longpress="true"></image><view class="text-area"><view class="big-box"><navigator url="../../pagesA/imgbox/imgbox"><button size="mini">一起换头像吧</button></navigator></view></view></view>
